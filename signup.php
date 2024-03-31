@@ -3,8 +3,10 @@
 $uname = $_POST['username'];
 $email = $_POST['email'];
 $pass = $_POST['password']
-
-$conn=mysql_connect("localhost","root","Apakaleto@123");
+$servername = "localhost";
+$username = "root";
+$password = "password";
+$conn = new mysqli($servername,$username,$password);
 if(!$conn)
 {
  die('erro in connection'.mysql_error());
